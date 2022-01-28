@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sample_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu:   "/>
+        <Button
+            android:id="@+id/btn_menu_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show_log"
+            />
+    </LinearLayout>
+
+    <ViewAnimator
+        android:id="@+id/sample_output"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                android:text="This sample demonstrates how to emulate an NFC card, using the {host card emulation} feature added in Android 4.4. This sample makes the device appear as a loyalty card whenever the screen is on and the user taps their device on an appropriately configured NFC reader." />
+
+        </ScrollView>
+
+        <fragment
+            android:id="@+id/log_fragment"
+            android:name="com.example.android.common.logger.LogFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </ViewAnimator>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <FrameLayout
+        android:id="@+id/sample_content_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="2" />
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyCardEmulation</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="card_title">Sample Loyalty Card</string>
+    <string name="service_name">MyCardEmulationTest</string>
+</resources>
